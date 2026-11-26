@@ -1,0 +1,1480 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费永久电影在线观看_高清正版影视资源_免费永久电影在线观看平台</title>
+<meta name="description" content="「免费永久电影在线观看」官方网站是面向影迷的原创高清影视内容社区，提供正版电影解说、深度影评、幕后专访与观影攻略，打造值得信赖的品质内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111318'/%3E%3Cpath d='M20 16h24a6 6 0 0 1 6 6v20a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6V22a6 6 0 0 1 6-6z' fill='none' stroke='%23ff3d5a' stroke-width='3'/%3E%3Cpath d='M28 25l14 7-14 7z' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --film-bg:#111318;
+    --film-bg-deep:#0b0d11;
+    --film-panel:#191c23;
+    --film-panel-2:#20242d;
+    --film-line:#2c313c;
+    --film-text:#e8eaef;
+    --film-text-dim:#9aa2b1;
+    --film-red:#ff3d5a;
+    --film-amber:#ffd166;
+    --film-cyan:#4fd1c5;
+    --film-radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+    background:var(--film-bg);
+    color:var(--film-text);
+    line-height:1.75;
+    font-size:15px;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  ul,ol{list-style:none}
+  button,input{font-family:inherit;font-size:inherit;color:inherit}
+  button{cursor:pointer;border:none;background:none}
+  .fm-wrap{width:min(1180px,92vw);margin:0 auto}
+  .fm-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+  /* ============ 吸顶公告 + 页头 ============ */
+  .fm-sticky-stack{position:sticky;top:0;z-index:120}
+  .fm-notice-bar{
+    background:linear-gradient(90deg,#2a0f16,#3a1220 45%,#2a0f16);
+    border-bottom:1px solid #4a1a28;
+    font-size:13px;
+    color:#ffd9df;
+  }
+  .fm-notice-inner{
+    display:flex;align-items:center;gap:14px;
+    padding:8px 0;overflow:hidden;
+  }
+  .fm-notice-tag{
+    flex:0 0 auto;
+    background:var(--film-red);color:#fff;
+    font-size:11px;font-weight:700;letter-spacing:.08em;
+    padding:2px 8px;border-radius:4px;
+  }
+  .fm-notice-track{display:flex;gap:34px;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+  .fm-notice-track::-webkit-scrollbar{display:none}
+  .fm-notice-item{display:inline-flex;align-items:center;gap:6px}
+  .fm-notice-item b{color:var(--film-amber);font-weight:600}
+  .fm-notice-close{
+    margin-left:auto;flex:0 0 auto;color:#ff9fb0;
+    padding:0 4px;font-size:16px;line-height:1;
+  }
+  .fm-notice-close:hover{color:#fff}
+
+  .fm-header{
+    background:rgba(17,19,24,.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--film-line);
+  }
+  .fm-header-inner{
+    display:flex;align-items:center;gap:22px;
+    padding:12px 0;
+  }
+  .fm-brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+  .fm-brand-mark{
+    width:38px;height:38px;border-radius:10px;
+    background:linear-gradient(135deg,#ff3d5a,#ff8a5c);
+    display:grid;place-items:center;font-weight:800;font-size:18px;color:#fff;
+    box-shadow:0 4px 14px rgba(255,61,90,.35);
+  }
+  .fm-brand-text{line-height:1.25}
+  .fm-brand-text strong{display:block;font-size:16px;letter-spacing:.02em}
+  .fm-brand-text span{display:block;font-size:11px;color:var(--film-text-dim);letter-spacing:.16em}
+  .fm-nav{display:flex;align-items:center;gap:4px;flex:1 1 auto;flex-wrap:wrap}
+  .fm-nav a{
+    font-size:14px;color:var(--film-text-dim);
+    padding:6px 11px;border-radius:8px;transition:.18s;
+  }
+  .fm-nav a:hover{color:#fff;background:var(--film-panel-2)}
+  .fm-search{
+    position:relative;display:flex;align-items:center;gap:8px;flex:0 0 260px;
+  }
+  .fm-search input{
+    width:100%;background:var(--film-panel);border:1px solid var(--film-line);
+    border-radius:999px;padding:8px 16px;font-size:13px;color:var(--film-text);
+    outline:none;transition:.2s;
+  }
+  .fm-search input:focus{border-color:var(--film-red);box-shadow:0 0 0 3px rgba(255,61,90,.15)}
+  .fm-search input::placeholder{color:#6b7382}
+  .fm-search-btn{
+    position:absolute;right:5px;top:5px;
+    background:var(--film-red);color:#fff;border-radius:999px;
+    width:26px;height:26px;display:grid;place-items:center;font-size:13px;
+  }
+  .fm-search-feedback{
+    position:absolute;top:calc(100% + 8px);left:0;right:0;
+    background:var(--film-panel);border:1px solid var(--film-line);
+    border-radius:10px;padding:10px 12px;font-size:12.5px;
+    color:var(--film-text-dim);display:none;z-index:130;
+    box-shadow:0 12px 28px rgba(0,0,0,.5);
+  }
+  .fm-search-feedback.is-open{display:block}
+  .fm-search-feedback b{color:var(--film-amber)}
+  .fm-burger{
+    display:none;flex:0 0 auto;width:38px;height:38px;border-radius:9px;
+    background:var(--film-panel);border:1px solid var(--film-line);
+    place-items:center;
+  }
+  .fm-burger span{display:block;width:16px;height:2px;background:var(--film-text);position:relative}
+  .fm-burger span::before,.fm-burger span::after{
+    content:"";position:absolute;left:0;width:16px;height:2px;background:var(--film-text);
+  }
+  .fm-burger span::before{top:-5px}
+  .fm-burger span::after{top:5px}
+
+  /* ============ 首屏 ============ */
+  .fm-hero{position:relative;padding:56px 0 48px;overflow:hidden}
+  .fm-hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(680px 320px at 12% 0%,rgba(255,61,90,.16),transparent 70%),
+      radial-gradient(520px 300px at 88% 30%,rgba(79,209,197,.10),transparent 70%);
+  }
+  .fm-hero-grid{
+    position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:44px;align-items:center;
+  }
+  .fm-hero-kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;letter-spacing:.16em;color:var(--film-amber);
+    border:1px solid #4a3a18;background:#221d10;
+    padding:5px 12px;border-radius:999px;margin-bottom:18px;
+  }
+  .fm-hero h1{
+    font-size:clamp(30px,4.2vw,48px);line-height:1.2;
+    letter-spacing:-.01em;font-weight:800;margin-bottom:16px;
+  }
+  .fm-hero h1 em{
+    font-style:normal;color:transparent;
+    background:linear-gradient(100deg,#ff3d5a,#ffd166);
+    -webkit-background-clip:text;background-clip:text;
+  }
+  .fm-hero-lead{color:var(--film-text-dim);font-size:15.5px;max-width:52ch;margin-bottom:16px}
+  .fm-hero-about{
+    font-size:13.5px;color:#b7bdc9;background:var(--film-panel);
+    border-left:3px solid var(--film-red);border-radius:0 10px 10px 0;
+    padding:12px 16px;margin-bottom:22px;
+  }
+  .fm-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+  .fm-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 22px;border-radius:999px;font-size:14px;font-weight:600;
+    transition:.2s;border:1px solid transparent;
+  }
+  .fm-btn-primary{background:var(--film-red);color:#fff;box-shadow:0 8px 22px rgba(255,61,90,.3)}
+  .fm-btn-primary:hover{background:#ff5771;transform:translateY(-1px)}
+  .fm-btn-ghost{border-color:var(--film-line);background:var(--film-panel);color:var(--film-text)}
+  .fm-btn-ghost:hover{border-color:#4a5161;background:var(--film-panel-2)}
+  .fm-hero-stats{display:flex;gap:30px;flex-wrap:wrap}
+  .fm-stat strong{display:block;font-size:24px;font-weight:800;color:var(--film-amber);line-height:1.2}
+  .fm-stat span{font-size:12px;color:var(--film-text-dim);letter-spacing:.04em}
+  .fm-hero-visual{position:relative}
+  .fm-hero-frame{
+    border-radius:18px;overflow:hidden;border:1px solid var(--film-line);
+    background:var(--film-panel);box-shadow:0 30px 70px rgba(0,0,0,.55);
+    aspect-ratio:16/10;
+  }
+  .fm-hero-frame img{width:100%;height:100%;object-fit:cover}
+  .fm-hero-float{
+    position:absolute;left:-18px;bottom:-20px;
+    background:var(--film-panel-2);border:1px solid var(--film-line);
+    border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:12px;
+    box-shadow:0 14px 30px rgba(0,0,0,.5);
+  }
+  .fm-hero-float .dot{width:9px;height:9px;border-radius:50%;background:var(--film-cyan);box-shadow:0 0 0 4px rgba(79,209,197,.18)}
+  .fm-hero-float p{font-size:12.5px;color:var(--film-text-dim);line-height:1.4}
+  .fm-hero-float p b{color:#fff;font-weight:600;font-size:13px;display:block}
+
+  /* ============ 通用区块 ============ */
+  .fm-section{padding:56px 0}
+  .fm-section-alt{background:var(--film-bg-deep);border-top:1px solid var(--film-line);border-bottom:1px solid var(--film-line)}
+  .fm-sec-head{margin-bottom:30px;max-width:62ch}
+  .fm-sec-head h2{
+    font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.01em;margin-bottom:8px;
+  }
+  .fm-sec-head h2 span{color:var(--film-red)}
+  .fm-sec-head p{color:var(--film-text-dim);font-size:14px}
+
+  /* 标签筛选 */
+  .fm-filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+  .fm-chip{
+    font-size:12.5px;padding:6px 14px;border-radius:999px;
+    background:var(--film-panel);border:1px solid var(--film-line);color:var(--film-text-dim);
+    transition:.18s;
+  }
+  .fm-chip:hover{border-color:#4a5161;color:#fff}
+  .fm-chip.is-active{background:var(--film-red);border-color:var(--film-red);color:#fff}
+
+  /* 焦点 + 视频列表布局 */
+  .fm-focus-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:30px;align-items:start}
+  .fm-focus-card{
+    background:var(--film-panel);border:1px solid var(--film-line);
+    border-radius:var(--film-radius);overflow:hidden;transition:.25s;
+  }
+  .fm-focus-card:hover{border-color:#3d4350;transform:translateY(-2px)}
+  .fm-focus-thumb{aspect-ratio:16/9;overflow:hidden;position:relative}
+  .fm-focus-thumb img{width:100%;height:100%;object-fit:cover;transition:.4s}
+  .fm-focus-card:hover .fm-focus-thumb img{transform:scale(1.04)}
+  .fm-play-badge{
+    position:absolute;left:14px;bottom:14px;
+    background:rgba(11,13,17,.78);backdrop-filter:blur(4px);
+    border:1px solid rgba(255,255,255,.14);
+    color:#fff;font-size:12px;padding:4px 12px;border-radius:999px;
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .fm-focus-body{padding:18px 20px 20px}
+  .fm-focus-body h3{font-size:18px;font-weight:700;margin-bottom:8px;line-height:1.45}
+  .fm-focus-body p{font-size:13.5px;color:var(--film-text-dim);margin-bottom:14px}
+  .fm-meta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:12.5px;color:#7d8595;margin-bottom:14px}
+  .fm-meta .fm-author{color:var(--film-amber);font-weight:500}
+  .fm-actions{display:flex;gap:10px;flex-wrap:wrap}
+  .fm-act{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:12.5px;padding:6px 12px;border-radius:8px;
+    background:var(--film-panel-2);border:1px solid var(--film-line);
+    color:var(--film-text-dim);transition:.18s;
+  }
+  .fm-act:hover{color:#fff;border-color:#4a5161}
+  .fm-act.is-liked{color:var(--film-red);border-color:#5a2230;background:#26141a}
+  .fm-act.is-saved{color:var(--film-amber);border-color:#4a3a18;background:#221d10}
+
+  .fm-video-list{display:flex;flex-direction:column;gap:14px}
+  .fm-video-item{
+    display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:start;
+    background:var(--film-panel);border:1px solid var(--film-line);
+    border-radius:12px;padding:16px 18px;transition:.2s;
+  }
+  .fm-video-item:hover{border-color:#3d4350;background:var(--film-panel-2)}
+  .fm-video-item h3{font-size:15px;font-weight:700;line-height:1.45;margin-bottom:5px}
+  .fm-video-item p{font-size:12.8px;color:var(--film-text-dim);margin-bottom:9px}
+  .fm-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px}
+  .fm-tag{font-size:11px;padding:2px 8px;border-radius:4px;background:#252a34;color:#a9b1c0}
+  .fm-tag.hot{background:#3a1220;color:#ffa8b8}
+  .fm-num{
+    font-size:12px;color:var(--film-text-dim);letter-spacing:.02em;white-space:nowrap;
+    text-align:right;
+  }
+  .fm-num b{display:block;font-size:18px;color:var(--film-amber);font-weight:800;line-height:1.2}
+
+  /* 关键词解析 */
+  .fm-kw-block{
+    background:var(--film-panel);border:1px solid var(--film-line);
+    border-radius:18px;padding:36px 38px;
+  }
+  .fm-kw-block h2{margin-bottom:10px}
+  .fm-kw-block .fm-kw-lead{color:var(--film-text-dim);font-size:14px;margin-bottom:26px;max-width:70ch}
+  .fm-kw-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 40px}
+  .fm-kw-cols h3{
+    font-size:16px;font-weight:700;margin-bottom:8px;color:#fff;
+    display:flex;align-items:center;gap:8px;
+  }
+  .fm-kw-cols h3::before{content:"";width:4px;height:16px;border-radius:2px;background:var(--film-red)}
+  .fm-kw-cols p{font-size:13.6px;color:#b2b9c6;line-height:1.85}
+
+  /* 专题 */
+  .fm-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .fm-feature-card{
+    background:var(--film-panel);border:1px solid var(--film-line);
+    border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:.22s;
+  }
+  .fm-feature-card:hover{border-color:#3d4350;transform:translateY(-3px)}
+  .fm-feature-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+  .fm-feature-card .body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column}
+  .fm-feature-card h3{font-size:15.5px;font-weight:700;margin-bottom:6px}
+  .fm-feature-card .desc{font-size:12.8px;color:var(--film-text-dim);margin-bottom:12px;flex:1}
+  .fm-status{
+    display:inline-flex;align-items:center;gap:5px;font-size:11px;
+    padding:3px 9px;border-radius:999px;margin-bottom:10px;align-self:flex-start;
+  }
+  .fm-status.live{background:#0f2a26;color:var(--film-cyan);border:1px solid #1c4640}
+  .fm-status.soon{background:#2a2310;color:var(--film-amber);border:1px solid #4a3a18}
+  .fm-feature-list{border-top:1px dashed var(--film-line);padding-top:12px;display:flex;flex-direction:column;gap:7px}
+  .fm-feature-list li{font-size:12.5px;color:#98a0ae;display:flex;gap:8px}
+  .fm-feature-list li::before{content:"›";color:var(--film-red);font-weight:700}
+
+  /* 创作者矩阵 */
+  .fm-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+  .fm-author{
+    background:var(--film-panel);border:1px solid var(--film-line);
+    border-radius:14px;padding:20px;display:flex;gap:16px;align-items:flex-start;transition:.2s;
+  }
+  .fm-author:hover{border-color:#3d4350;background:var(--film-panel-2)}
+  .fm-avatar{
+    flex:0 0 54px;width:54px;height:54px;border-radius:14px;
+    display:grid;place-items:center;font-weight:800;font-size:20px;color:#fff;
+  }
+  .fm-avatar.a1{background:linear-gradient(135deg,#ff3d5a,#ff8a5c)}
+  .fm-avatar.a2{background:linear-gradient(135deg,#4fd1c5,#2b7a78)}
+  .fm-avatar.a3{background:linear-gradient(135deg,#8b7cff,#5a4fd1)}
+  .fm-avatar.a4{background:linear-gradient(135deg,#ffd166,#e08c2a)}
+  .fm-author-body h3{font-size:15.5px;font-weight:700;margin-bottom:3px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .fm-role{font-size:11px;color:var(--film-cyan);border:1px solid #1c4640;background:#0f2a26;padding:1px 7px;border-radius:4px;font-weight:500}
+  .fm-author-body .field{font-size:12px;color:var(--film-amber);margin-bottom:8px}
+  .fm-author-body .bio{font-size:12.8px;color:#a7aebb;line-height:1.7}
+  .fm-author-meta{display:flex;gap:14px;font-size:12px;color:#7d8595;margin-top:10px}
+  .fm-author-meta b{color:#fff;font-weight:700}
+
+  /* 榜单 */
+  .fm-rank-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .fm-rank-col{background:var(--film-panel);border:1px solid var(--film-line);border-radius:14px;padding:20px}
+  .fm-rank-col h3{font-size:15.5px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .fm-rank-col h3 .bar{width:4px;height:15px;border-radius:2px;background:var(--film-red)}
+  .fm-rank-li{display:flex;gap:12px;padding:9px 0;border-bottom:1px dashed var(--film-line);align-items:baseline}
+  .fm-rank-li:last-child{border-bottom:none}
+  .fm-rank-no{flex:0 0 20px;font-weight:800;font-size:14px;color:#5c6473}
+  .fm-rank-li:nth-child(1) .fm-rank-no{color:var(--film-amber)}
+  .fm-rank-li:nth-child(2) .fm-rank-no{color:#c9d1dc}
+  .fm-rank-li:nth-child(3) .fm-rank-no{color:#c98a4a}
+  .fm-rank-li .t{flex:1;font-size:13.2px;line-height:1.5}
+  .fm-rank-li .t small{display:block;font-size:11.5px;color:#7d8595;margin-top:2px}
+  .fm-rank-li .v{font-size:12px;color:var(--film-cyan);white-space:nowrap}
+
+  /* 评价 */
+  .fm-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .fm-review{
+    background:var(--film-panel);border:1px solid var(--film-line);
+    border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:10px;
+  }
+  .fm-review .top{display:flex;align-items:center;gap:10px}
+  .fm-review .av{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:700;color:#fff}
+  .fm-review .nm{font-size:13px;font-weight:600}
+  .fm-review .st{margin-left:auto;color:var(--film-amber);font-size:12px;letter-spacing:1px}
+  .fm-review p{font-size:13px;color:#b2b9c6}
+  .fm-review .when{font-size:11.5px;color:#6b7382}
+
+  /* 企业动态 */
+  .fm-news-list{display:flex;flex-direction:column;gap:2px}
+  .fm-news-li{
+    display:flex;gap:18px;padding:15px 4px;border-bottom:1px solid var(--film-line);
+    align-items:baseline;transition:.18s;
+  }
+  .fm-news-li:hover{background:rgba(255,255,255,.02)}
+  .fm-news-li time{flex:0 0 92px;font-size:12.5px;color:var(--film-text-dim);font-variant-numeric:tabular-nums}
+  .fm-news-li .t{flex:1;font-size:14px}
+  .fm-news-li .badge{font-size:11px;color:var(--film-red);border:1px solid #5a2230;background:#26141a;padding:1px 7px;border-radius:4px;flex:0 0 auto}
+
+  /* 合作 */
+  .fm-partner-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+  .fm-partner{
+    border:1px solid var(--film-line);background:var(--film-panel);border-radius:12px;
+    padding:20px 14px;text-align:center;font-size:13px;color:#c3cad6;transition:.2s;
+  }
+  .fm-partner:hover{border-color:#4a5161;color:#fff;transform:translateY(-2px)}
+  .fm-partner small{display:block;font-size:11px;color:#6b7382;margin-top:4px}
+
+  /* FAQ */
+  .fm-faq{display:flex;flex-direction:column;gap:10px;max-width:860px}
+  .fm-faq details{
+    background:var(--film-panel);border:1px solid var(--film-line);border-radius:12px;
+    padding:0 18px;transition:.2s;
+  }
+  .fm-faq details[open]{border-color:#3d4350;background:var(--film-panel-2)}
+  .fm-faq summary{
+    list-style:none;cursor:pointer;padding:15px 0;font-size:14px;font-weight:600;
+    display:flex;align-items:center;gap:10px;
+  }
+  .fm-faq summary::-webkit-details-marker{display:none}
+  .fm-faq summary::before{content:"+";color:var(--film-red);font-weight:800;font-size:16px;width:14px}
+  .fm-faq details[open] summary::before{content:"−"}
+  .fm-faq p{font-size:13.2px;color:#a7aebb;padding:0 0 16px 24px;line-height:1.8}
+
+  /* 投稿/联系 */
+  .fm-cta-panel{
+    background:linear-gradient(120deg,#1c1218,#191c23 55%,#101a1a);
+    border:1px solid var(--film-line);border-radius:18px;
+    padding:38px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
+    gap:32px;align-items:center;
+  }
+  .fm-cta-panel h2{font-size:24px;font-weight:800;margin-bottom:10px}
+  .fm-cta-panel p{font-size:13.8px;color:#a7aebb;margin-bottom:18px}
+  .fm-cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .fm-cta-side{background:rgba(255,255,255,.03);border:1px solid var(--film-line);border-radius:12px;padding:20px}
+  .fm-cta-side li{display:flex;justify-content:space-between;gap:10px;font-size:12.8px;padding:7px 0;border-bottom:1px dashed var(--film-line)}
+  .fm-cta-side li:last-child{border-bottom:none}
+  .fm-cta-side li span{color:#8b93a2}
+  .fm-cta-side li b{color:#fff;font-weight:600}
+
+  /* 页脚 */
+  .fm-footer{background:var(--film-bg-deep);border-top:1px solid var(--film-line);padding:48px 0 26px;margin-top:20px}
+  .fm-footer-grid{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:30px;margin-bottom:32px}
+  .fm-footer h4{font-size:13px;font-weight:700;margin-bottom:12px;color:#fff;letter-spacing:.04em}
+  .fm-footer p,.fm-footer li{font-size:12.8px;color:#8b93a2;line-height:1.9}
+  .fm-footer li a:hover{color:var(--film-red)}
+  .fm-footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  .fm-footer-brand .mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#ff3d5a,#ff8a5c);display:grid;place-items:center;font-weight:800;color:#fff;font-size:15px}
+  .fm-footer-bottom{
+    border-top:1px solid var(--film-line);padding-top:20px;
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    font-size:12px;color:#6b7382;
+  }
+
+  /* Toast & Modal */
+  .fm-toast{
+    position:fixed;left:50%;bottom:36px;transform:translate(-50%,20px);
+    background:#262b35;border:1px solid #3d4350;color:#fff;
+    padding:10px 20px;border-radius:999px;font-size:13px;z-index:300;
+    opacity:0;pointer-events:none;transition:.28s;box-shadow:0 14px 34px rgba(0,0,0,.5);
+  }
+  .fm-toast.is-show{opacity:1;transform:translate(-50%,0)}
+  .fm-modal-mask{
+    position:fixed;inset:0;background:rgba(5,7,10,.72);backdrop-filter:blur(4px);
+    display:none;place-items:center;z-index:250;padding:20px;
+  }
+  .fm-modal-mask.is-open{display:grid}
+  .fm-modal{
+    background:var(--film-panel);border:1px solid var(--film-line);border-radius:16px;
+    width:min(520px,100%);padding:28px;position:relative;max-height:86vh;overflow:auto;
+  }
+  .fm-modal h3{font-size:19px;font-weight:800;margin-bottom:6px}
+  .fm-modal .sub{font-size:13px;color:var(--film-text-dim);margin-bottom:18px}
+  .fm-modal label{display:block;font-size:12.5px;color:#a7aebb;margin-bottom:6px}
+  .fm-modal input,.fm-modal textarea{
+    width:100%;background:var(--film-bg-deep);border:1px solid var(--film-line);
+    border-radius:9px;padding:10px 13px;font-size:13px;color:#fff;outline:none;margin-bottom:14px;
+    transition:.2s;
+  }
+  .fm-modal input:focus,.fm-modal textarea:focus{border-color:var(--film-red)}
+  .fm-modal textarea{min-height:88px;resize:vertical}
+  .fm-modal-close{
+    position:absolute;right:16px;top:14px;font-size:20px;color:#8b93a2;line-height:1;
+  }
+  .fm-modal-close:hover{color:#fff}
+  .fm-modal .fm-btn{width:100%;justify-content:center}
+
+  .fm-top-btn{
+    position:fixed;right:24px;bottom:28px;width:44px;height:44px;border-radius:50%;
+    background:var(--film-panel-2);border:1px solid var(--film-line);color:#fff;
+    display:grid;place-items:center;z-index:180;opacity:0;pointer-events:none;transition:.25s;
+    font-size:16px;box-shadow:0 10px 26px rgba(0,0,0,.5);
+  }
+  .fm-top-btn.is-show{opacity:1;pointer-events:auto}
+  .fm-top-btn:hover{background:var(--film-red);border-color:var(--film-red)}
+
+  /* 锚点偏移 */
+  section[id],div[id]{scroll-margin-top:132px}
+
+  /* ============ 响应式 ============ */
+  @media (max-width:1024px){
+    .fm-hero-grid{grid-template-columns:minmax(0,1fr);gap:34px}
+    .fm-focus-grid{grid-template-columns:minmax(0,1fr)}
+    .fm-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .fm-rank-grid{grid-template-columns:minmax(0,1fr)}
+    .fm-partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .fm-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .fm-kw-cols{grid-template-columns:minmax(0,1fr);gap:20px}
+    .fm-cta-panel{grid-template-columns:minmax(0,1fr)}
+  }
+  @media (max-width:820px){
+    .fm-nav{
+      display:none;position:absolute;left:0;right:0;top:100%;
+      background:var(--film-panel);border-bottom:1px solid var(--film-line);
+      padding:10px 4vw;flex-direction:column;align-items:stretch;gap:2px;
+    }
+    .fm-nav.is-open{display:flex}
+    .fm-nav a{padding:10px 12px}
+    .fm-header-inner{position:relative;flex-wrap:wrap;gap:12px}
+    .fm-search{order:3;flex:1 1 100%;display:none}
+    .fm-search.is-open{display:flex}
+    .fm-burger{display:grid;margin-left:auto}
+    .fm-author-grid,.fm-review-grid{grid-template-columns:minmax(0,1fr)}
+    .fm-feature-grid{grid-template-columns:minmax(0,1fr)}
+    .fm-kw-block{padding:26px 22px}
+    .fm-cta-panel{padding:26px}
+  }
+  @media (max-width:560px){
+    .fm-hero{padding:38px 0 38px}
+    .fm-section{padding:40px 0}
+    .fm-video-item{grid-template-columns:minmax(0,1fr)}
+    .fm-num{text-align:left;display:flex;align-items:baseline;gap:6px}
+    .fm-num b{display:inline;font-size:15px}
+    .fm-hero-float{position:static;margin-top:14px;left:auto;bottom:auto}
+    .fm-footer-grid{grid-template-columns:minmax(0,1fr)}
+    .fm-partner-grid{grid-template-columns:minmax(0,1fr)}
+    .fm-notice-track{gap:22px}
+    .fm-author{flex-direction:column;gap:12px}
+  }
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- ============ S1 吸顶公告 + 页头 ============ -->
+<div class="fm-sticky-stack">
+  <div class="fm-notice-bar" id="fmNoticeBar">
+    <div class="fm-wrap fm-notice-inner">
+      <span class="fm-notice-tag">官方公告</span>
+      <div class="fm-notice-track">
+        <span class="fm-notice-item"><b>新增上线</b>「华语经典修复特辑」收录 42 部高清片源，免费永久观看</span>
+        <span class="fm-notice-item"><b>活动报名</b>「年度影评人挑战赛」11 月 25 日开启投稿，奖金池 8 万元</span>
+        <span class="fm-notice-item"><b>版本更新</b>播放器 v3.6 支持 4K 智能码率与弹幕分轨</span>
+        <span class="fm-notice-item"><b>官方发布</b>创作者激励计划第三期名单公布，共 128 位创作者入选</span>
+      </div>
+      <button class="fm-notice-close" id="fmNoticeClose" aria-label="关闭公告条">✕</button>
+    </div>
+  </div>
+
+  <header class="fm-header">
+    <div class="fm-wrap fm-header-inner">
+      <a class="fm-brand" href="#fmTop">
+        <span class="fm-brand-mark">影</span>
+        <span class="fm-brand-text">
+          <strong>光影无界</strong>
+          <span>YINGGUANG · 官方</span>
+        </span>
+      </a>
+      <nav class="fm-nav" id="fmNav" aria-label="主导航">
+        <a href="#fmFocus">焦点内容</a>
+        <a href="#fmKeyword">内容解析</a>
+        <a href="#fmFeatures">专题企划</a>
+        <a href="#fmAuthors">创作者</a>
+        <a href="#fmRank">榜单</a>
+        <a href="#fmReviews">用户口碑</a>
+        <a href="#fmFaq">帮助</a>
+      </nav>
+      <div class="fm-search" id="fmSearch">
+        <input type="text" id="fmSearchInput" placeholder="搜索影片、影评、创作者…" aria-label="站内搜索">
+        <button class="fm-search-btn" id="fmSearchBtn" aria-label="搜索">⌕</button>
+        <div class="fm-search-feedback" id="fmSearchFeedback" aria-live="polite"></div>
+      </div>
+      <button class="fm-burger" id="fmBurger" aria-label="打开菜单"><span></span></button>
+    </div>
+  </header>
+</div>
+
+<!-- ============ S2 首屏 ============ -->
+<main id="fmTop">
+<section class="fm-hero">
+  <div class="fm-wrap fm-hero-grid">
+    <div>
+      <span class="fm-hero-kicker">● 官方视频门户 · 正版高清 · 持续运营</span>
+      <h1>免费永久电影在线观看<br><em>影像品牌官网</em></h1>
+      <p class="fm-hero-lead">当一部电影被反复观看，它就不再只是作品，而成为观众共同的记忆坐标。光影无界以原创内容与专业策展为核心，让每一次免费永久电影在线观看都通向更深的理解。</p>
+      <p class="fm-hero-about">作为深耕影视内容领域的品牌，光影无界官方网站致力于搭建高品质内容生态：我们聚合专业影评人、独立创作者与资深影迷社区，围绕正版高清片源、深度解析、幕后访谈与观影攻略持续输出精品内容，为观众提供值得信赖的免费在线观看入口与真实、温暖、有力量的影像体验。</p>
+      <div class="fm-hero-actions">
+        <a class="fm-btn fm-btn-primary" href="#fmFocus">立即观看精选 ↗</a>
+        <a class="fm-btn fm-btn-ghost" href="#fmFeatures">查看专题企划</a>
+        <a class="fm-btn fm-btn-ghost" id="fmHeroSubmit" href="#fmContact">投递作品</a>
+      </div>
+      <div class="fm-hero-stats">
+        <div class="fm-stat"><strong data-count="12860">0</strong><span>在线可看片源 / 部</span></div>
+        <div class="fm-stat"><strong data-count="326">0</strong><span>签约创作者 / 位</span></div>
+        <div class="fm-stat"><strong data-count="98">0</strong><span>用户好评率 / %</span></div>
+      </div>
+    </div>
+
+    <div class="fm-hero-visual">
+      <div class="fm-hero-frame">
+        <svg viewBox="0 0 800 500" role="img" aria-label="光影无界影厅巨幕主视觉：深色放映厅中亮起的银幕与光束">
+          <defs>
+            <linearGradient id="screenGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2b1a2f"/>
+              <stop offset=".45" stop-color="#4a1f2c"/>
+              <stop offset="1" stop-color="#1a2233"/>
+            </linearGradient>
+            <linearGradient id="beamGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffd166" stop-opacity=".55"/>
+              <stop offset="1" stop-color="#ffd166" stop-opacity="0"/>
+            </linearGradient>
+            <radialGradient id="glowGrad" cx=".5" cy=".5" r=".5">
+              <stop offset="0" stop-color="#ff3d5a" stop-opacity=".55"/>
+              <stop offset="1" stop-color="#ff3d5a" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="800" height="500" fill="#0d0f14"/>
+          <ellipse cx="400" cy="250" rx="330" ry="200" fill="url(#glowGrad)"/>
+          <rect x="110" y="96" width="580" height="300" rx="12" fill="url(#screenGrad)" stroke="#3d4350" stroke-width="2"/>
+          <path d="M400 96 L230 396 L570 396 Z" fill="url(#beamGrad)" opacity=".55"/>
+          <circle cx="400" cy="246" r="54" fill="none" stroke="#ffd166" stroke-width="3" opacity=".9"/>
+          <path d="M384 222 L428 246 L384 270 Z" fill="#ffd166"/>
+          <rect x="110" y="96" width="580" height="300" rx="12" fill="none" stroke="#ff3d5a" stroke-width="1.5" opacity=".5"/>
+          <g fill="#151922">
+            <rect x="0" y="410" width="800" height="90"/>
+          </g>
+          <g fill="#20242d" stroke="#2c313c">
+            <rect x="60" y="414" width="88" height="54" rx="8"/>
+            <rect x="172" y="414" width="88" height="54" rx="8"/>
+            <rect x="540" y="414" width="88" height="54" rx="8"/>
+            <rect x="652" y="414" width="88" height="54" rx="8"/>
+            <rect x="284" y="430" width="88" height="48" rx="8"/>
+            <rect x="396" y="430" width="88" height="48" rx="8"/>
+          </g>
+          <g fill="#ffd166" opacity=".85">
+            <circle cx="150" cy="150" r="2.5"/>
+            <circle cx="240" cy="196" r="2"/>
+            <circle cx="560" cy="160" r="2.5"/>
+            <circle cx="650" cy="220" r="2"/>
+            <circle cx="470" cy="130" r="1.8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="fm-hero-float">
+        <span class="dot"></span>
+        <p><b>4K 修复片源已就绪</b>今日新增 18 部，无需注册即可观看</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S3 主内容入口：焦点 + 视频列表 ============ -->
+<section class="fm-section fm-section-alt" id="fmFocus">
+  <div class="fm-wrap">
+    <div class="fm-sec-head">
+      <h2>焦点内容 <span>·</span> 本周编辑严选</h2>
+      <p>由官网编辑团队与签约影评人共同策展，聚焦免费永久电影在线观看的深度入口，每一部都配有原创解析与正版高清片源说明。</p>
+    </div>
+
+    <div class="fm-filter-bar" id="fmFilterBar" role="group" aria-label="内容筛选">
+      <button class="fm-chip is-active" data-filter="all">全部</button>
+      <button class="fm-chip" data-filter="修复">经典修复</button>
+      <button class="fm-chip" data-filter="访谈">人物访谈</button>
+      <button class="fm-chip" data-filter="攻略">观影攻略</button>
+      <button class="fm-chip" data-filter="观察">行业观察</button>
+    </div>
+
+    <div class="fm-focus-grid">
+      <article class="fm-focus-card" data-cat="修复">
+        <div class="fm-focus-thumb">
+          <svg viewBox="0 0 640 360" role="img" aria-label="《雾港旧事》4K修复版焦点封面：雨夜码头与霓虹灯牌的电影画面">
+            <defs>
+              <linearGradient id="rain1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#101826"/>
+                <stop offset="1" stop-color="#1f2b3d"/>
+              </linearGradient>
+              <linearGradient id="neon1" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#ff3d5a"/>
+                <stop offset="1" stop-color="#ffb03d"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="360" fill="url(#rain1)"/>
+            <g stroke="#3b4a60" stroke-width="1.2" opacity=".7">
+              <line x1="80" y1="0" x2="60" y2="120"/>
+              <line x1="160" y1="20" x2="140" y2="150"/>
+              <line x1="260" y1="0" x2="244" y2="130"/>
+              <line x1="380" y1="10" x2="366" y2="140"/>
+              <line x1="470" y1="0" x2="456" y2="120"/>
+              <line x1="560" y1="24" x2="542" y2="160"/>
+            </g>
+            <rect x="0" y="240" width="640" height="120" fill="#0a121c"/>
+            <rect x="120" y="90" width="150" height="72" rx="6" fill="#17202e" stroke="#2c3a50"/>
+            <rect x="140" y="108" width="110" height="8" rx="4" fill="url(#neon1)" opacity=".9"/>
+            <rect x="140" y="124" width="72" height="6" rx="3" fill="#5d748f"/>
+            <rect x="140" y="138" width="92" height="6" rx="3" fill="#3d5268"/>
+            <rect x="360" y="150" width="170" height="90" rx="8" fill="#141d2a" stroke="#2c3a50"/>
+            <circle cx="392" cy="182" r="13" fill="#ffd166" opacity=".85"/>
+            <path d="M360 240 L440 190 L500 240 Z" fill="#1e2c3d"/>
+            <path d="M470 240 L520 205 L560 240 Z" fill="#16202c"/>
+            <g stroke="#89a4c2" stroke-width="2" opacity=".55">
+              <line x1="60" y1="260" x2="240" y2="260"/>
+              <line x1="300" y1="278" x2="520" y2="278"/>
+              <line x1="180" y1="300" x2="400" y2="300"/>
+            </g>
+          </svg>
+          <span class="fm-play-badge">▶ 正片 118 分钟</span>
+        </div>
+        <div class="fm-focus-body">
+          <h3>《雾港旧事》4K 修复全记录：一部老片如何重新被看见</h3>
+          <p>从胶片除尘、色彩校准到声音重建，跟拍修复团队 14 个月的工作现场，并附上完整观影顺序建议与免费永久电影在线观看的正版片源入口。</p>
+          <div class="fm-meta">
+            <span class="fm-author">南屿放映室</span>
+            <span>2026-11-18</span>
+            <span>播放 24.6 万</span>
+            <span>收藏 1.8 万</span>
+          </div>
+          <div class="fm-actions">
+            <button class="fm-act fm-like-btn">♡ 点赞 <span class="n">6421</span></button>
+            <button class="fm-act fm-save-btn">☆ 收藏</button>
+            <button class="fm-act fm-comment-btn">💬 评论</button>
+            <button class="fm-act fm-copy-btn" data-url="#fmFocus">⧉ 复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="fm-video-list">
+        <article class="fm-video-item" data-cat="访谈">
+          <div>
+            <h3>导演陆行舟访谈：我把免费永久电影在线观看当作一次公共放映</h3>
+            <p>聊《长夜将尽》的三年拍摄，以及为什么坚持把完整片源放进官方平台免费开放。</p>
+            <div class="fm-tags"><span class="fm-tag hot">人物访谈</span><span class="fm-tag">创作幕后</span></div>
+            <div class="fm-actions">
+              <button class="fm-act fm-like-btn">♡ 点赞 <span class="n">2310</span></button>
+              <button class="fm-act fm-save-btn">☆ 收藏</button>
+              <button class="fm-act fm-comment-btn">💬 评论</button>
+            </div>
+          </div>
+          <div class="fm-num"><b>9.6</b>口碑分</div>
+        </article>
+
+        <article class="fm-video-item" data-cat="攻略">
+          <div>
+            <h3>三个小时看懂黑色电影：从灯光到反派的完整观影攻略</h3>
+            <p>附 12 部入门片单与观看顺序，全部可在站内正版高清片源中免费永久观看。</p>
+            <div class="fm-tags"><span class="fm-tag">观影攻略</span><span class="fm-tag">知识科普</span></div>
+            <div class="fm-actions">
+              <button class="fm-act fm-like-btn">♡ 点赞 <span class="n">1877</span></button>
+              <button class="fm-act fm-save-btn">☆ 收藏</button>
+              <button class="fm-act fm-comment-btn">💬 评论</button>
+            </div>
+          </div>
+          <div class="fm-num"><b>42.1万</b>播放</div>
+        </article>
+
+        <article class="fm-video-item" data-cat="观察">
+          <div>
+            <h3>小城影院生存观察：当免费片源走进社区放映厅</h3>
+            <p>走访四座三线城市影院，记录一场关于观影方式与公共文化空间的真实讨论。</p>
+            <div class="fm-tags"><span class="fm-tag">行业观察</span><span class="fm-tag">城市探索</span></div>
+            <div class="fm-actions">
+              <button class="fm-act fm-like-btn">♡ 点赞 <span class="n">1204</span></button>
+              <button class="fm-act fm-save-btn">☆ 收藏</button>
+              <button class="fm-act fm-comment-btn">💬 评论</button>
+            </div>
+          </div>
+          <div class="fm-num"><b>16.8万</b>播放</div>
+        </article>
+
+        <article class="fm-video-item" data-cat="修复">
+          <div>
+            <h3>胶片上的划痕怎么修？修复师的一天与 7 个技术细节</h3>
+            <p>从 2K 扫描到逐帧去噪，第一次完整展示正版片源修复流程。</p>
+            <div class="fm-tags"><span class="fm-tag">创作幕后</span><span class="fm-tag">实用技巧</span></div>
+            <div class="fm-actions">
+              <button class="fm-act fm-like-btn">♡ 点赞 <span class="n">986</span></button>
+              <button class="fm-act fm-save-btn">☆ 收藏</button>
+              <button class="fm-act fm-comment-btn">💬 评论</button>
+            </div>
+          </div>
+          <div class="fm-num"><b>11.2万</b>播放</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S4 关键词解析（深度长文） ============ -->
+<section class="fm-section" id="fmKeyword">
+  <div class="fm-wrap">
+    <div class="fm-kw-block">
+      <h2>关键词深度解析 <span>·</span> 免费永久电影在线观看</h2>
+      <p class="fm-kw-lead">许多观众在搜索框里敲下这九个字时，真正想要的并不只是一条链接，而是一种确定感：这部片子我看得到、看得清、看得安心。光影无界官方网站把这份确定感拆解成四个层面，逐一说给你听。</p>
+
+      <div class="fm-kw-cols">
+        <div>
+          <h3>一、免费与永久：两个被误解的词</h3>
+          <p>在行业语境里，“免费”往往被误读为“低质”。但在我们的内容体系里，免费指的是观众端零门槛：不需要会员等级，不需要连续签到换取观看时长，也不需要为清晰的画质额外付费。永久则指片源的长期可及性——我们与版权方签订的是长周期授权，并在版权到期前主动续约，把片源从“限时上架”变成“稳定在架”。正因为如此，站内每一部作品都标注了清晰的片源来源、授权区间与画质规格，观众可以放心地把链接收藏起来，明年再点开时它依然在那里。这是我们对“免费永久电影在线观看”最朴素的理解：不是营销话术，而是一份可被验证的承诺。</p>
+          <p>需要说明的是，我们并不鼓励无限制的搬运与二次分发。官网提供的每一部片源都经过授权核验，任何未经许可的下载、转码与商业放映都不在授权范围内。真正健康的免费，是版权方、平台与观众三方都获得合理回报之后的结果。</p>
+        </div>
+        <div>
+          <h3>二、在线观看背后的三条技术线</h3>
+          <p>很多观众只关心“点开能不能放”，但一次顺畅的在线观看背后至少有两条技术线在同时工作。第一条是编码与码率自适应：我们把母版转出多档清晰度，播放器根据实时带宽在 480P 到 4K 之间做无感切换，弱网环境下优先保证播放不中断。第二条是分发与边缘缓存：热门片源会提前预热到离用户更近的节点，减少首帧等待。第三条是字幕与音轨轨道化：多语言字幕与评论音轨作为独立轨道加载，观众不必为了看一条解析而重新缓冲整部片子。</p>
+          <p>2026 年 11 月，播放器更新到 v3.6，新增了 4K 智能码率与弹幕分轨能力，也让“免费永久电影在线观看”这件事在体验上更接近专业影厅。技术不喧哗，但每一次顺利播放都是它在场。</p>
+        </div>
+        <div>
+          <h3>三、内容生态：让看过变成读懂</h3>
+          <p>如果只有片源，平台就只是一个仓库。光影无界真正投入最多的是内容生态：我们签约了 326 位创作者，覆盖影评、修复、访谈、影像科普与城市放映记录。每上线一部重点片源，编辑团队会同步组织至少三篇配套内容——一篇讲清楚它为什么值得看，一篇拆解它的技术与美学，一篇记录与它相关的真实故事。观众看完正片，可以顺势进入解析，把“看过”变成“读懂”。</p>
+          <p>这种生态也反哺了创作者。社区每周的观影讨论会沉淀成选题，创作者再据此产出新内容，形成正向循环。我们坚持原创与正版，拒绝标题党与盗链搬运，这不是清高，而是对“品质”二字最基本的交代。行业领先不靠一次爆发，靠的是持续运营与日复一日的匠心积累。</p>
+        </div>
+        <div>
+          <h3>四、社区与陪伴：观众也是作者</h3>
+          <p>在光影无界，观众从来不是被动的接收者。评论区里有人补全了一部老片的拍摄年份，有人纠正了字幕里的地名，也有人写下自己十几年前第一次看这部片的场景。这些内容我们都会整理进“观众注脚”，与官方解析并列展示。包容与多元不是口号，它体现在我们愿意让不同的声音被看见。</p>
+          <p>从成长的角度看，一个社区真正的价值在于陪伴：陪你度过一个不知道看什么的周末，陪你把一部电影反复看上五遍，也陪你在某句台词里突然理解了当年不懂的事。我们希望这个官方网站不只是一个入口，而是一个可以长期停留的地方。真实、温暖、有力量——这是我们给自己定的内容标准，也是我们想传递给每一位观众的东西。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S4 专题企划 ============ -->
+<section class="fm-section fm-section-alt" id="fmFeatures">
+  <div class="fm-wrap">
+    <div class="fm-sec-head">
+      <h2>专题企划 <span>·</span> 官方策展</h2>
+      <p>围绕免费永久电影在线观看的不同切面，我们每季度推出一个深度专题，配套完整片单、解析文章与创作者访谈。</p>
+    </div>
+
+    <div class="fm-feature-grid">
+      <article class="fm-feature-card">
+        <svg viewBox="0 0 640 360" role="img" aria-label="华语经典修复特辑专题封面：老式胶片盘与暖黄光晕">
+          <defs>
+            <radialGradient id="reelGlow" cx=".5" cy=".5" r=".6">
+              <stop offset="0" stop-color="#ffd166" stop-opacity=".45"/>
+              <stop offset="1" stop-color="#ffd166" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="640" height="360" fill="#16120c"/>
+          <rect width="640" height="360" fill="url(#reelGlow)"/>
+          <circle cx="320" cy="180" r="118" fill="none" stroke="#c9a35e" stroke-width="10" opacity=".55"/>
+          <circle cx="320" cy="180" r="74" fill="none" stroke="#8a6d38" stroke-width="6" opacity=".7"/>
+          <g fill="#221a10" stroke="#a8844a" stroke-width="3">
+            <circle cx="320" cy="110" r="22"/>
+            <circle cx="382" cy="158" r="22"/>
+            <circle cx="360" cy="234" r="22"/>
+            <circle cx="280" cy="234" r="22"/>
+            <circle cx="258" cy="158" r="22"/>
+          </g>
+          <circle cx="320" cy="180" r="12" fill="#ffd166"/>
+          <g stroke="#5c4a2a" stroke-width="2" opacity=".8">
+            <path d="M40 320 Q160 270 320 300 T600 300"/>
+            <path d="M40 340 Q180 300 340 320 T600 320"/>
+          </g>
+        </svg>
+        <div class="body">
+          <span class="fm-status live">● 更新中 · 第 3 批已上线</span>
+          <h3>华语经典修复特辑</h3>
+          <p class="desc">收录 42 部华语影史代表作，全部提供正版高清修复片源，免费永久在线观看，并配修复日志与导演手记。</p>
+          <ul class="fm-feature-list">
+            <li>《雾港旧事》4K 修复全记录</li>
+            <li>《山那边来的信》2K 扫描版</li>
+            <li>《长街春信》声音重建特辑</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="fm-feature-card">
+        <svg viewBox="0 0 640 360" role="img" aria-label="城市放映计划专题封面：夜色中的社区广场与白色幕布">
+          <rect width="640" height="360" fill="#0e1a1e"/>
+          <rect x="0" y="250" width="640" height="110" fill="#132329"/>
+          <rect x="180" y="70" width="280" height="160" rx="6" fill="#e6e2d3" opacity=".92"/>
+          <rect x="212" y="100" width="216" height="100" rx="4" fill="#1c2c30"/>
+          <circle cx="320" cy="150" r="26" fill="#ffb03d" opacity=".8"/>
+          <g fill="#0b1416">
+            <rect x="60" y="286" width="52" height="42" rx="6"/>
+            <rect x="128" y="292" width="48" height="36" rx="6"/>
+            <rect x="470" y="286" width="52" height="42" rx="6"/>
+            <rect x="540" y="292" width="48" height="36" rx="6"/>
+          </g>
+          <g fill="#4fd1c5" opacity=".75">
+            <circle cx="86" cy="286" r="6"/>
+            <circle cx="152" cy="292" r="5"/>
+            <circle cx="496" cy="286" r="6"/>
+            <circle cx="564" cy="292" r="5"/>
+          </g>
+          <path d="M180 70 L120 40 L520 40 L460 70 Z" fill="#1b2f34" opacity=".6"/>
+        </svg>
+        <div class="body">
+          <span class="fm-status live">● 更新中 · 第 2 站已开映</span>
+          <h3>城市放映计划</h3>
+          <p class="desc">把免费永久电影在线观看的片源带进社区广场与独立书店，记录每场放映之后观众的真实反应。</p>
+          <ul class="fm-feature-list">
+            <li>三线小城影院生存观察</li>
+            <li>书店里的午夜场放映记</li>
+            <li>露天幕布下的观众留言</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="fm-feature-card">
+        <svg viewBox="0 0 640 360" role="img" aria-label="创作者影像营专题封面：取景器构图与对焦刻度">
+          <rect width="640" height="360" fill="#171225"/>
+          <rect x="70" y="60" width="500" height="240" rx="10" fill="none" stroke="#8b7cff" stroke-width="3"/>
+          <g stroke="#8b7cff" stroke-width="2" opacity=".8">
+            <line x1="70" y1="110" x2="110" y2="110"/>
+            <line x1="70" y1="250" x2="110" y2="250"/>
+            <line x1="530" y1="110" x2="570" y2="110"/>
+            <line x1="530" y1="250" x2="570" y2="250"/>
+          </g>
+          <circle cx="320" cy="180" r="58" fill="none" stroke="#ff3d5a" stroke-width="2" opacity=".8"/>
+          <circle cx="320" cy="180" r="18" fill="#ffd166" opacity=".85"/>
+          <g stroke="#4a4258" stroke-width="2">
+            <line x1="140" y1="320" x2="500" y2="320"/>
+          </g>
+          <g fill="#5a4fd1">
+            <rect x="160" y="310" width="3" height="20"/>
+            <rect x="240" y="310" width="3" height="20"/>
+            <rect x="320" y="310" width="3" height="26"/>
+            <rect x="400" y="310" width="3" height="20"/>
+            <rect x="480" y="310" width="3" height="20"/>
+          </g>
+        </svg>
+        <div class="body">
+          <span class="fm-status soon">◐ 12 月上线 · 报名中</span>
+          <h3>创作者影像营</h3>
+          <p class="desc">面向投稿者的年度创作挑战，提供脚本、剪辑与片源授权指导，入选作品将在官网官方发布。</p>
+          <ul class="fm-feature-list">
+            <li>五分钟影评短片训练营</li>
+            <li>正版片源使用与授权说明</li>
+            <li>年度影评人挑战赛细则</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S5 创作者矩阵 ============ -->
+<section class="fm-section" id="fmAuthors">
+  <div class="fm-wrap">
+    <div class="fm-sec-head">
+      <h2>创作者矩阵 <span>·</span> 让专业的人讲专业的事</h2>
+      <p>光影无界签约创作者覆盖影评、修复、访谈与影像科普四大方向，他们构成了平台内容生态最核心的生产力。</p>
+    </div>
+
+    <div class="fm-author-grid">
+      <article class="fm-author">
+        <div class="fm-avatar a1">南</div>
+        <div class="fm-author-body">
+          <h3>南屿放映室 <span class="fm-role">资深影评人</span></h3>
+          <div class="field">擅长：经典修复 · 影史考据</div>
+          <p class="bio">十年影评写作，主攻华语电影史与修复技术。她习惯把一部片子拆成光线、声音与时代三件事来讲，文字克制，考据扎实。代表作《雾港旧事修复全记录》播放超过 24 万次，被多位导演转发推荐。</p>
+          <div class="fm-author-meta"><span>作品 <b>86</b></span><span>粉丝 <b>12.4万</b></span></div>
+        </div>
+      </article>
+
+      <article class="fm-author">
+        <div class="fm-avatar a2">林</div>
+        <div class="fm-author-body">
+          <h3>林间剪辑台 <span class="fm-role">影像技术作者</span></h3>
+          <div class="field">擅长：剪辑教程 · 修复技术</div>
+          <p class="bio">前纪录片后期，现全职内容创作。擅长用最直白的方式讲清编码、调色与声音重建，视频里几乎不出现术语而不解释的情况。他相信好内容需要被看懂，而不是被仰望，是站内实用技巧类内容的主力作者。</p>
+          <div class="fm-author-meta"><span>作品 <b>61</b></span><span>粉丝 <b>9.1万</b></span></div>
+        </div>
+      </article>
+
+      <article class="fm-author">
+        <div class="fm-avatar a3">拾</div>
+        <div class="fm-author-body">
+          <h3>拾光访谈录 <span class="fm-role">人物访谈主理人</span></h3>
+          <div class="field">擅长：人物访谈 · 创作幕后</div>
+          <p class="bio">专注电影人访谈七年，采访过近百位导演、摄影与美术指导。他更关心作品之外的那些日常：一次失败的勘景、一段被删掉的戏、一个不肯妥协的镜头。访谈风格温和但不回避，社区口碑极高。</p>
+          <div class="fm-author-meta"><span>作品 <b>48</b></span><span>粉丝 <b>7.6万</b></span></div>
+        </div>
+      </article>
+
+      <article class="fm-author">
+        <div class="fm-avatar a4">夜</div>
+        <div class="fm-author-body">
+          <h3>夜航观影团 <span class="fm-role">社区策展人</span></h3>
+          <div class="field">擅长：观影攻略 · 城市探索</div>
+          <p class="bio">由三位影迷在 2019 年发起的观影小组，如今负责站内“城市放映计划”的策划与执行。他们擅长把片单做成可以照着走的路线，也擅长记录一场放映结束后观众还不肯走的那十分钟，真实而温暖。</p>
+          <div class="fm-author-meta"><span>作品 <b>39</b></span><span>粉丝 <b>5.8万</b></span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S6 数据榜单 ============ -->
+<section class="fm-section fm-section-alt" id="fmRank">
+  <div class="fm-wrap">
+    <div class="fm-sec-head">
+      <h2>数据榜单 <span>·</span> 热度、新人、口碑</h2>
+      <p>榜单由播放、收藏、完播与评论质量四项加权计算，每周一更新，帮助新观众快速找到值得点开的免费永久电影在线观看内容。</p>
+    </div>
+
+    <div class="fm-rank-grid">
+      <div class="fm-rank-col">
+        <h3><span class="bar"></span>周热度榜</h3>
+        <ul>
+          <li class="fm-rank-li"><span class="fm-rank-no">01</span><span class="t">《雾港旧事》4K修复全记录<small>南屿放映室 · 修复</small></span><span class="v">24.6万</span></li>
+          <li class="fm-rank-li"><span class="fm-rank-no">02</span><span class="t">黑色电影三小时观影攻略<small>林间剪辑台 · 攻略</small></span><span class="v">21.3万</span></li>
+          <li class="fm-rank-li"><span class="fm-rank-no">03</span><span class="t">导演陆行舟访谈<small>拾光访谈录 · 访谈</small></span><span class="v">18.7万</span></li>
+          <li class="fm-rank-li"><span class="fm-rank-no">04</span><span class="t">小城影院生存观察<small>夜航观影团 · 观察</small></span><span class="v">16.8万</span></li>
+          <li class="fm-rank-li"><span class="fm-rank-no">05</span><span class="t">胶片划痕修复的一天<small>林间剪辑台 · 幕后</small></span><span class="v">11.2万</span></li>
+        </ul>
+      </div>
+
+      <div class="fm-rank-col">
+        <h3><span class="bar"></span>新人创作者榜</h3>
+        <ul>
+          <li class="fm-rank-li"><span class="fm-rank-no">01</span><span class="t">胶囊放映机<small>入站 62 天 · 短片影评</small></span><span class="v">+1.2万</span></li>
+          <li class="fm-rank-li"><span class="fm-rank-no">02</span><span class="t">木栈道影像<small>入站 78 天 · 城市纪录</small></span><span class="v">+9600</span></li>
+          <li class="fm-rank-li"><span class="fm-rank-no">03</span><span class="t">二十六格<small>入站 90 天 · 摄影美学</small></span><span class="v">+8100</span></li>
+          <li class="fm-rank-li"><span class="fm-rank-no">04</span><span class="t">晚班观众<small>入站 104 天 · 观影随笔</small></span><span class="v">+6400</span></li>
+          <li class="fm-rank-li"><span class="fm-rank-no">05</span><span class="t">老片新看<small>入站 118 天 · 经典重读</small></span><span class="v">+5200</span></li>
+        </ul>
+      </div>
+
+      <div class="fm-rank-col">
+        <h3><span class="bar"></span>口碑好评榜</h3>
+        <ul>
+          <li class="fm-rank-li"><span class="fm-rank-no">01</span><span class="t">《山那边来的信》修复版<small>观众评分 9.8 / 10</small></span><span class="v">98%</span></li>
+          <li class="fm-rank-li"><span class="fm-rank-no">02</span><span class="t">《长街春信》声音重建特辑<small>观众评分 9.7 / 10</small></span><span class="v">97%</span></li>
+          <li class="fm-rank-li"><span class="fm-rank-no">03</span><span class="t">雾港旧事修复全记录<small>观众评分 9.6 / 10</small></span><span class="v">96%</span></li>
+          <li class="fm-rank-li"><span class="fm-rank-no">04</span><span class="t">导演陆行舟访谈<small>观众评分 9.5 / 10</small></span><span class="v">95%</span></li>
+          <li class="fm-rank-li"><span class="fm-rank-no">05</span><span class="t">书店里的午夜场放映记<small>观众评分 9.3 / 10</small></span><span class="v">93%</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S6 用户评价 ============ -->
+<section class="fm-section" id="fmReviews">
+  <div class="fm-wrap">
+    <div class="fm-sec-head">
+      <h2>用户口碑 <span>·</span> 真实观众怎么说</h2>
+      <p>以下评价来自站内注册用户，涵盖画质、片源、内容与社区体验四个维度，我们不做筛选与修饰。</p>
+    </div>
+
+    <div class="fm-review-grid">
+      <article class="fm-review">
+        <div class="top"><span class="av" style="background:linear-gradient(135deg,#ff3d5a,#ff8a5c)">陈</span><span class="nm">陈默的放映厅</span><span class="st">★★★★★</span></div>
+        <p>最打动我的是片源真的稳定。去年收藏的《雾港旧事》今天点开还在，画质也升级到了 4K。这种“免费永久电影在线观看”不是宣传语，是能验证的。</p>
+        <span class="when">2026-11-19 · 来自修复专题</span>
+      </article>
+
+      <article class="fm-review">
+        <div class="top"><span class="av" style="background:linear-gradient(135deg,#4fd1c5,#2b7a78)">阿</span><span class="nm">阿吉不加班</span><span class="st">★★★★☆</span></div>
+        <p>解析文章写得比正片还耐读。看完修复记录再回去看原片，连雨夜那场戏的噪点都觉得有故事。就是更新节奏慢了点，希望多上几部。</p>
+        <span class="when">2026-11-17 · 来自内容解析</span>
+      </article>
+
+      <article class="fm-review">
+        <div class="top"><span class="av" style="background:linear-gradient(135deg,#8b7cff,#5a4fd1)">洛</span><span class="nm">洛城小满</span><span class="st">★★★★★</span></div>
+        <p>城市放映计划那期看哭了。我们小城也有过这样的露天幕布，看到评论区有人贴出自己拍的现场照片，突然觉得这个社区很温暖。</p>
+        <span class="when">2026-11-15 · 来自专题企划</span>
+      </article>
+
+      <article class="fm-review">
+        <div class="top"><span class="av" style="background:linear-gradient(135deg,#ffd166,#e08c2a)">周</span><span class="nm">周日下午三点</span><span class="st">★★★★☆</span></div>
+        <p>播放器这次的智能码率更新好评，地铁上也能顺畅看完一集访谈。字幕轨道切换也方便，希望以后能加双字幕对照。</p>
+        <span class="when">2026-11-14 · 来自官方动态</span>
+      </article>
+
+      <article class="fm-review">
+        <div class="top"><span class="av" style="background:linear-gradient(135deg,#4fd1c5,#8b7cff)">海</span><span class="nm">海边旧胶片</span><span class="st">★★★★★</span></div>
+        <p>投稿过一次短片影评，编辑给了很细的修改意见，不是模板回复。三个月后作品真的上了官网首页，这种认真劲儿很少见。</p>
+        <span class="when">2026-11-12 · 来自投稿入口</span>
+      </article>
+
+      <article class="fm-review">
+        <div class="top"><span class="av" style="background:linear-gradient(135deg,#ff8a5c,#ff3d5a)">二</span><span class="nm">二十格速写</span><span class="st">★★★☆☆</span></div>
+        <p>内容很好，但部分老片的字幕是机器转写，人名偶尔出错。建议增加观众纠错入口，我愿意帮忙校对。</p>
+        <span class="when">2026-11-10 · 来自用户反馈</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S7 辅助区：企业动态 + 合作 + FAQ ============ -->
+<section class="fm-section fm-section-alt" id="fmNews">
+  <div class="fm-wrap">
+    <div class="fm-sec-head">
+      <h2>企业动态 <span>·</span> 官方发布与更新日志</h2>
+      <p>关于平台运营、内容更新与社区活动的官方消息，均在此同步，欢迎订阅获取第一时间通知。</p>
+    </div>
+
+    <ul class="fm-news-list">
+      <li class="fm-news-li">
+        <time>2026-11-21</time>
+        <span class="t">「华语经典修复特辑」第三批 12 部片源上线，全部支持 4K 与多语言字幕，免费永久电影在线观看。</span>
+        <span class="badge">内容更新</span>
+      </li>
+      <li class="fm-news-li">
+        <time>2026-11-18</time>
+        <span class="t">播放器 v3.6 正式发布：新增 4K 智能码率、弹幕分轨与投屏画质自适应，弱网环境首帧等待下降 42%。</span>
+        <span class="badge">产品发布</span>
+      </li>
+      <li class="fm-news-li">
+        <time>2026-11-15</time>
+        <span class="t">创作者激励计划第三期名单公布，128 位创作者入选，年度总投入提升至 1200 万元。</span>
+        <span class="badge">官方公告</span>
+      </li>
+      <li class="fm-news-li">
+        <time>2026-11-10</time>
+        <span class="t">「年度影评人挑战赛」报名通道 11 月 25 日开启，共设六个赛道，面向所有注册用户开放投稿。</span>
+        <span class="badge">活动报名</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="fm-section" id="fmPartners">
+  <div class="fm-wrap">
+    <div class="fm-sec-head">
+      <h2>合作品牌 <span>·</span> 共同守护正版内容</h2>
+      <p>感谢以下机构与品牌在片源授权、修复技术与社区放映场地上的长期支持，让免费永久电影在线观看可持续地运转。</p>
+    </div>
+    <div class="fm-partner-grid">
+      <div class="fm-partner">晨光影业<small>片源授权合作</small></div>
+      <div class="fm-partner">拾帧修复实验室<small>修复技术伙伴</small></div>
+      <div class="fm-partner">城市之光书店<small>放映场地支持</small></div>
+      <div class="fm-partner">南岸声音工作室<small>音轨重建支持</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="fm-section fm-section-alt" id="fmFaq">
+  <div class="fm-wrap">
+    <div class="fm-sec-head">
+      <h2>常见问题 <span>·</span> 官方解答</h2>
+      <p>关于观看、版权与投稿的高频疑问，先看这里。若仍未解决，可通过页面底部联系入口反馈。</p>
+    </div>
+    <div class="fm-faq">
+      <details open>
+        <summary>“免费永久电影在线观看”是真的不需要付费吗？</summary>
+        <p>是真的。官网提供的片源在授权范围内对注册用户免费开放，不设会员门槛，也不按清晰度额外收费。我们依靠版权合作与创作者内容生态维持运营，不会通过隐性收费限制观看。</p>
+      </details>
+      <details>
+        <summary>为什么有些片子过一段时间无法观看？</summary>
+        <p>极少数片源因版权方授权范围调整需要暂时下架，属于行业常规操作。我们会在片源页提前公示并给出替代片单，同时尽最大努力完成续约，多数作品可长期稳定在架。</p>
+      </details>
+      <details>
+        <summary>观看时卡顿或画质自动降低怎么办？</summary>
+        <p>播放器会根据实时网络状况自适应码率，这是为了保障播放不中断。如果长时间停留在低清晰度，可以检查网络连接，或在播放设置中手动锁定清晰度。v3.6 后的版本在弱网环境已做优化。</p>
+      </details>
+      <details>
+        <summary>可以在站内下载片源吗？</summary>
+        <p>目前仅提供在线观看，不提供完整片源下载，这是版权协议的要求。部分修复特辑会提供官方预告与花絮的下载，具体以片源页标注为准。</p>
+      </details>
+      <details>
+        <summary>如何成为签约创作者？</summary>
+        <p>通过页面底部“作品投稿”入口提交原创作品即可。编辑团队会在七个工作日内反馈，通过审核后可加入创作者激励计划，获得片源授权支持与内容推广资源。</p>
+      </details>
+      <details>
+        <summary>字幕出现错误怎么反馈？</summary>
+        <p>播放器右下角设有字幕纠错入口，提交的内容会进入人工校对队列。我们每月公布一次优质校对者名单，并赠送官方周边，感谢每一位认真看片的观众。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S7 联系/投稿 ============ -->
+<section class="fm-section" id="fmContact">
+  <div class="fm-wrap">
+    <div class="fm-cta-panel">
+      <div>
+        <h2>把你的作品放进官网首页</h2>
+        <p>无论是一篇三千字的影评、一段五分钟的影像随笔，还是一份完整的片单攻略，我们都愿意认真看完。光影无界官方网站持续开放投稿，原创与正版是我们的底线，真实与温暖是我们的期待。</p>
+        <div class="fm-cta-actions">
+          <button class="fm-btn fm-btn-primary" id="fmOpenSubmit">立即投稿 ↗</button>
+          <button class="fm-btn fm-btn-ghost" id="fmOpenContact">联系我们</button>
+        </div>
+      </div>
+      <ul class="fm-cta-side">
+        <li><span>投稿审核周期</span><b>7 个工作日</b></li>
+        <li><span>合作邮箱</span><b>hezuo@yingguang.example</b></li>
+        <li><span>内容咨询</span><b>工作日 10:00–19:00</b></li>
+        <li><span>社区规模</span><b>326 位签约创作者</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ S8 页脚 ============ -->
+<footer class="fm-footer">
+  <div class="fm-wrap">
+    <div class="fm-footer-grid">
+      <div>
+        <div class="fm-footer-brand">
+          <span class="mark">影</span>
+          <div>
+            <strong style="display:block;font-size:15px;color:#fff">光影无界</strong>
+            <span style="font-size:11px;color:#6b7382;letter-spacing:.14em">YINGGUANG FILM</span>
+          </div>
+        </div>
+        <p>光影无界官方网站 | 版权所有 | 持续运营中<br>专注正版高清影视内容与创作者社区，提供值得信赖的免费永久电影在线观看体验。</p>
+      </div>
+      <div>
+        <h4>内容入口</h4>
+        <ul>
+          <li><a href="#fmFocus">焦点内容</a></li>
+          <li><a href="#fmFeatures">专题企划</a></li>
+          <li><a href="#fmRank">数据榜单</a></li>
+          <li><a href="#fmReviews">用户口碑</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于平台</h4>
+        <ul>
+          <li><a href="#fmKeyword">内容解析</a></li>
+          <li><a href="#fmAuthors">创作者矩阵</a></li>
+          <li><a href="#fmNews">企业动态</a></li>
+          <li><a href="#fmFaq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与我们</h4>
+        <ul>
+          <li><a href="#fmContact">作品投稿</a></li>
+          <li><a href="#fmPartners">合作品牌</a></li>
+          <li><a href="#fmContact">联系我们</a></li>
+          <li><a href="#fmTop">回到顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fm-footer-bottom">
+      <span>© 2026 光影无界 · 官方网站 · 京ICP备 0000000 号-1 · 京公网安备 00000000000000 号</span>
+      <span>原创内容版权归创作者所有 · 严禁盗链与商业转播</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="fm-toast" id="fmToast" role="status" aria-live="polite"></div>
+
+<!-- 通用弹窗 -->
+<div class="fm-modal-mask" id="fmModalMask">
+  <div class="fm-modal" role="dialog" aria-modal="true" aria-labelledby="fmModalTitle">
+    <button class="fm-modal-close" id="fmModalClose" aria-label="关闭">✕</button>
+    <h3 id="fmModalTitle">标题</h3>
+    <p class="sub" id="fmModalSub"></p>
+    <div id="fmModalBody"></div>
+  </div>
+</div>
+
+<button class="fm-top-btn" id="fmTopBtn" aria-label="回到顶部">↑</button>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Toast ---------- */
+  var toastEl = document.getElementById("fmToast");
+  var toastTimer = null;
+  function toast(msg) {
+    toastEl.textContent = msg;
+    toastEl.classList.add("is-show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      toastEl.classList.remove("is-show");
+    }, 2200);
+  }
+
+  /* ---------- 公告条关闭 ---------- */
+  var noticeBar = document.getElementById("fmNoticeBar");
+  document.getElementById("fmNoticeClose").addEventListener("click", function () {
+    noticeBar.style.display = "none";
+  });
+
+  /* ---------- 移动端导航折叠 ---------- */
+  var nav = document.getElementById("fmNav");
+  var searchBox = document.getElementById("fmSearch");
+  document.getElementById("fmBurger").addEventListener("click", function () {
+    nav.classList.toggle("is-open");
+    searchBox.classList.toggle("is-open");
+  });
+  nav.addEventListener("click", function (e) {
+    if (e.target.tagName === "A") {
+      nav.classList.remove("is-open");
+      searchBox.classList.remove("is-open");
+    }
+  });
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchInput = document.getElementById("fmSearchInput");
+  var searchFeedback = document.getElementById("fmSearchFeedback");
+  var searchBtn = document.getElementById("fmSearchBtn");
+
+  var searchIndex = [
+    { t: "《雾港旧事》4K 修复全记录", k: "修复 经典 南屿放映室" },
+    { t: "导演陆行舟访谈", k: "访谈 人物 创作幕后" },
+    { t: "黑色电影三小时观影攻略", k: "攻略 知识 片单" },
+    { t: "华语经典修复特辑", k: "专题 修复 片源" },
+    { t: "城市放映计划", k: "专题 城市 放映" },
+    { t: "小城影院生存观察", k: "观察 城市 影院" },
+    { t: "胶片修复师的一天", k: "修复 技术 幕后" },
+    { t: "创作者影像营报名", k: "活动 报名 投稿" }
+  ];
+
+  function runSearch() {
+    var q = searchInput.value.trim();
+    if (!q) {
+      searchFeedback.innerHTML = "输入片名、创作者或专题关键词试试，例如 <b>修复</b>、<b>访谈</b>。";
+      searchFeedback.classList.add("is-open");
+      return;
+    }
+    var hits = searchIndex.filter(function (item) {
+      return item.t.indexOf(q) > -1 || item.k.indexOf(q) > -1;
+    });
+    if (hits.length) {
+      searchFeedback.innerHTML = "找到 <b>" + hits.length + "</b> 条相关内容：" + hits.slice(0, 3).map(function (h) {
+        return "<br>· " + h.t;
+      }).join("");
+    } else {
+      searchFeedback.innerHTML = "暂未找到与「<b>" + q + "</b>」匹配的内容，换个关键词或浏览焦点内容看看。";
+    }
+    searchFeedback.classList.add("is-open");
+  }
+
+  searchBtn.addEventListener("click", runSearch);
+  searchInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") { runSearch(); }
+  });
+  searchInput.addEventListener("input", function () {
+    if (!searchInput.value.trim()) { searchFeedback.classList.remove("is-open"); }
+  });
+  document.addEventListener("click", function (e) {
+    if (!searchBox.contains(e.target)) { searchFeedback.classList.remove("is-open"); }
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.querySelectorAll(".fm-like-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var nEl = btn.querySelector(".n");
+      var liked = btn.classList.toggle("is-liked");
+      if (nEl) {
+        var base = parseInt(nEl.textContent, 10) || 0;
+        nEl.textContent = liked ? base + 1 : Math.max(0, base - 1);
+      }
+      btn.style.color = "";
+      toast(liked ? "已点赞，感谢你的认可" : "已取消点赞");
+    });
+  });
+
+  document.querySelectorAll(".fm-save-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var saved = btn.classList.toggle("is-saved");
+      btn.textContent = saved ? "★ 已收藏" : "☆ 收藏";
+      toast(saved ? "已加入收藏，可在个人中心查看" : "已取消收藏");
+    });
+  });
+
+  /* ---------- 复制链接 ---------- */
+  document.querySelectorAll(".fm-copy-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var text = "光影无界 · 免费永久电影在线观看 · " + (document.title || "");
+      function fallback() {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand("copy"); } catch (err) {}
+        document.body.removeChild(ta);
+        toast("链接已复制到剪贴板");
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          toast("链接已复制到剪贴板");
+        }).catch(fallback);
+      } else {
+        fallback();
+      }
+    });
+  });
+
+  /* ---------- 弹窗 ---------- */
+  var mask = document.getElementById("fmModalMask");
+  var modalTitle = document.getElementById("fmModalTitle");
+  var modalSub = document.getElementById("fmModalSub");
+  var modalBody = document.getElementById("fmModalBody");
+
+  function openModal(title, sub, bodyHTML) {
+    modalTitle.textContent = title;
+    modalSub.textContent = sub || "";
+    modalBody.innerHTML = bodyHTML;
+    mask.classList.add("is-open");
+  }
+  function closeModal() { mask.classList.remove("is-open"); }
+
+  document.getElementById("fmModalClose").addEventListener("click", closeModal);
+  mask.addEventListener("click", function (e) { if (e.target === mask) { closeModal(); } });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && mask.classList.contains("is-open")) { closeModal(); }
+  });
+
+  /* 评论弹窗 */
+  document.querySelectorAll(".fm-comment-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      openModal("写下你的观后感", "优质评论将有机会出现在官网“观众注脚”栏目。",
+        '<label for="fmCmt">评论内容</label>' +
+        '<textarea id="fmCmt" placeholder="说说这部片子打动你的地方…"></textarea>' +
+        '<button class="fm-btn fm-btn-primary" id="fmCmtSubmit">提交评论</button>');
+      var submit = document.getElementById("fmCmtSubmit");
+      submit.addEventListener("click", function () {
+        var val = document.getElementById("fmCmt").value.trim();
+        if (!val) { toast("评论内容不能为空"); return; }
+        closeModal();
+        toast("评论已提交，审核通过后展示");
+      });
+    });
+  });
+
+  /* 投稿弹窗 */
+  function openSubmit() {
+    openModal("作品投稿", "官方网站长期开放原创影像与影评投稿，审核周期约 7 个工作日。",
+      '<label for="fmSName">你的昵称</label>' +
+      '<input id="fmSName" type="text" placeholder="例如：南屿放映室">' +
+      '<label for="fmSTitle">作品标题</label>' +
+      '<input id="fmSTitle" type="text" placeholder="例如：一部老片的第二次生命">' +
+      '<label for="fmSDesc">作品简介</label>' +
+      '<textarea id="fmSDesc" placeholder="简述作品方向、时长与创作初衷…"></textarea>' +
+      '<button class="fm-btn fm-btn-primary" id="fmSubmitOk">提交投稿</button>');
+    document.getElementById("fmSubmitOk").addEventListener("click", function () {
+      var name = document.getElementById("fmSName").value.trim();
+      var title = document.getElementById("fmSTitle").value.trim();
+      if (!name || !title) { toast("请填写昵称与作品标题"); return; }
+      closeModal();
+      toast("投稿已收到，我们会在 7 个工作日内回复");
+    });
+  }
+  document.getElementById("fmOpenSubmit").addEventListener("click", openSubmit);
+  document.getElementById("fmHeroSubmit").addEventListener("click", function (e) {
+    e.preventDefault();
+    openSubmit();
+  });
+
+  /* 联系我们弹窗 */
+  document.getElementById("fmOpenContact").addEventListener("click", function () {
+    openModal("联系我们", "合作与内容咨询请通过以下方式联系官方团队。",
+      '<p style="font-size:13.5px;color:#b2b9c6;line-height:1.9">' +
+      '· 商务合作：hezuo@yingguang.example<br>' +
+      '· 内容投稿：tougao@yingguang.example<br>' +
+      '· 版权事务：copyright@yingguang.example<br>' +
+      '· 服务时间：工作日 10:00–19:00</p>');
+  });
+
+  /* ---------- 标签筛选 ---------- */
+  var chips = document.querySelectorAll("#fmFilterBar .fm-chip");
+  var cards = document.querySelectorAll("#fmFocus [data-cat]");
+  chips.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      chips.forEach(function (c) { c.classList.remove("is-active"); });
+      chip.classList.add("is-active");
+      var filter = chip.getAttribute("data-filter");
+      cards.forEach(function (card) {
+        var cat = card.getAttribute("data-cat");
+        card.style.display = (filter === "all" || filter === cat) ? "" : "none";
+      });
+    });
+  });
+
+  /* ---------- 数字滚动 ---------- */
+  var counted = false;
+  function runCounters() {
+    if (counted) { return; }
+    var stats = document.querySelectorAll("[data-count]");
+    if (!stats.length) { return; }
+    var rect = stats[0].getBoundingClientRect();
+    if (rect.top > window.innerHeight - 40) { return; }
+    counted = true;
+    stats.forEach(function (el) {
+      var target = parseInt(el.getAttribute("data-count"), 10) || 0;
+      var start = null;
+      var dur = 1200;
+      function step(ts) {
+        if (!start) { start = ts; }
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased).toLocaleString("en-US");
+        if (p < 1) { requestAnimationFrame(step); }
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  window.addEventListener("scroll", runCounters, { passive: true });
+  window.addEventListener("load", runCounters);
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById("fmTopBtn");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 520) {
+      topBtn.classList.add("is-show");
+    } else {
+      topBtn.classList.remove("is-show");
+    }
+  }, { passive: true });
+  topBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+})();
+</script>
+</body>
+  </html>
